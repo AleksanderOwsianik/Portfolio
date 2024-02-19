@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather:400,700&display=swap');
+@import 'settings/fonts';
+@import 'settings/colors';
+
+body {
+  font-family: $font-base;
+  color: red($color: #000000);
+}
+
+h1 {
+  color: $color-primary;
+}
