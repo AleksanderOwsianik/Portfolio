@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather:400,700&display=swap');
+@import 'settings/fonts';
+@import 'settings/colors';
+@import 'settings/buttons';
+
+body {
+  font-family: $font-base;
+}
+.home {
+}
+
+.home-three-columns {
+  display: flex;
+  text-align: center;
+  background-color: $color3;
+  font-size: 10px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.column {
+  width: auto;
+}
+.counter-numbers {
+  font-size: 40px;
+  font-weight: lighter;
+  margin: 0px;
+}
+.column-text {
+  font-size: 7px;
+}
+
+a {
+  text-decoration: none;
+}
+.nav-header {
+  background-color: violet;
+}
+.decoration {
+  height: 15px;
+  margin-bottom: 20px;
+}
+.add-buttons-section {
+  display: flex;
+  justify-content: center;
+}
+
+.main-headline {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.simple-steps {
+  text-align: center;
+  text-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+
+  .icons {
+    margin: 0px 30px 10px 0;
+    background-color: lightgrey;
+    font-size: 5px;
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    width: 30px;
+    margin: 20px 50px 5px 50px;
+    text-wrap: wrap;
+  }
+  .simple-text {
+    text-align: center;
+    text-wrap: wrap;
+    margin-bottom: 30px;
+    //zwęzić tekst lub dostosowac container do teksu tzn zmniejszyc
+  }
+  .hr {
+    width: 30px;
+    height: 0.5px;
+    border: none;
+    background-color: black;
+    margin: 2px auto;
+  }
+}

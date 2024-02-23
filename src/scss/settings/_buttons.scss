@@ -1,0 +1,36 @@
+//style dla przycisków
+$button-padding: 5px 10px;
+$button-border-radius: 1px;
+$button-margin-right: 5px;
+$button-background: transparent;
+$button-color: #333;
+$button-border: 1px solid;
+
+// Styl dla linków
+$link-padding: 10px 20px;
+$link-border-radius: 1px;
+$link-border: 1px solid;
+
+// Styl dla przycisków logowania
+.login-buttons {
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+  margin-right: $button-margin-right;
+  background: $button-background;
+  color: $button-color;
+  border: $button-border;
+  background-color: aquamarine;
+  font-size: 6px;
+}
+.nav-button {
+  font-size: 4px;
+  display: flex;
+  justify-content: right;
+}
+
+.add-buttons {
+  border: $button-border;
+  margin: 10px;
+  background: $button-background;
+  padding: $button-padding;
+}
