@@ -8,19 +8,24 @@ function HomeHeader() {
 
   return (
     <header className='nav-header'>
-      <div className='nav-button'>
-        <button onClick={() => handleMainMenuClick('/login')}>
+      <div className='login-buttons'>
+        <button
+          className='login-buttons-login'
+          onClick={() => handleMainMenuClick('/login')}
+        >
           <Link to={'/login'}>Login</Link>
         </button>
-        <button onClick={() => handleMainMenuClick('/register')}>
+        <button
+          className='login-buttons-register'
+          onClick={() => handleMainMenuClick('/register')}
+        >
           <Link to={'/register'}>Register</Link>
         </button>
       </div>
       <nav className='nav-button'>
-        <button className='login-buttons'>
+        <button className='nav-buttons'>
           <Link to={'/'}>Home</Link>
-        </button>
-        <button>
+
           {/* <ScrollLink
             to='home'
             smooth={true}
@@ -30,7 +35,7 @@ function HomeHeader() {
             Home
           </ScrollLink> */}
         </button>
-        <button className='login-buttons'>
+        <button className='nav-buttons'>
           <Link to={'/about'}>What is it about</Link>
         </button>
         <button>
@@ -43,7 +48,7 @@ function HomeHeader() {
             What is it about
           </ScrollLink> */}
         </button>
-        <button className='login-buttons'>
+        <button className='nav-buttons'>
           <Link to={'/about-us'}>About us</Link>
         </button>
         <button>
@@ -56,7 +61,7 @@ function HomeHeader() {
             About us
           </ScrollLink> */}
         </button>
-        <button className='login-buttons'>
+        <button className='nav-buttons'>
           <Link to={'/organizations'}>Foundation & organizations</Link>
         </button>
         <button>
@@ -69,7 +74,7 @@ function HomeHeader() {
             Foundation & organization
           </ScrollLink> */}
         </button>
-        <button className='login-buttons'>
+        <button className='nav-buttons'>
           <Link to={'/contact'}>Contact</Link>
         </button>
         <button>
@@ -84,24 +89,15 @@ function HomeHeader() {
         </button>
       </nav>
 
-      <section
-        className='main-header'
-        style={{ display: 'flex', alignItems: 'center' }}
-      >
+      <section className='home-section'>
         <img
           src='src/assets/Home-Hero-Image.jpg'
           alt='Start helping'
-          style={{ marginRight: '20px', maxWidth: '50%', height: 'auto' }}
+          className='home-image'
         />
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-        >
+        <div className='text-container'>
           <h3 className='main-headline'>
-            Start helping!
+            Start helping!<br></br>
             <span>Give unwanted things into trusted hands</span>
           </h3>
           <img

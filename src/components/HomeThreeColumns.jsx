@@ -3,7 +3,7 @@ function HomeThreeColumns() {
     <div className='home-three-columns'>
       <div className='column'>
         <h3 className='counter-numbers'>10</h3>
-        <p>Donated bags</p>
+        <p className='column-main-text'>Donated bags</p>
         <span className='column-text'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -13,7 +13,7 @@ function HomeThreeColumns() {
       </div>
       <div className='column'>
         <h3 className='counter-numbers'>5</h3>
-        <p>Supported organizations</p>
+        <p className='column-main-text'>Supported organizations</p>
         <span className='column-text'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -23,7 +23,7 @@ function HomeThreeColumns() {
       </div>
       <div className='column'>
         <h3 className='counter-numbers'>7</h3>
-        <p>Organized collection</p>
+        <p className='column-main-text'>Organized collection</p>
         <span className='column-text'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
