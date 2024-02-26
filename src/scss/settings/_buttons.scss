@@ -50,3 +50,15 @@
     margin-right: 44px;
   }
 }
+.fundation-text button {
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.fundation-text button.active {
+  font-weight: bold;
+  background-color: #fad648;
+}

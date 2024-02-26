@@ -197,3 +197,26 @@ a {
     height: 100%;
   }
 }
+
+.foundation-organizations {
+  background-color: aqua;
+  text-align: center;
+  .main-headline {
+    font: normal normal normal 38px/55px Open Sans;
+    letter-spacing: -0.76px;
+    color: #3c3c3c;
+    opacity: 1;
+  }
+
+  .fundation-text {
+    background-color: green;
+  }
+  .fundation-description-text {
+    background-color: brown;
+    text-align: left;
+    .donate-things {
+      color: rgb(99, 201, 79);
+      text-align: end;
+    }
+  }
+}
