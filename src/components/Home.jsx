@@ -1,3 +1,4 @@
+import AboutUs from './AboutUs';
 import HomeHeader from './HomeHeader';
 import HomeThreeColumns from './HomeThreeColumns';
 import MainSection from './MainSection';
@@ -10,6 +11,7 @@ function Home() {
       <HomeThreeColumns />
       <MainSection />
       <WhatIsItAbout />
+      <AboutUs />
     </div>
   );
 }

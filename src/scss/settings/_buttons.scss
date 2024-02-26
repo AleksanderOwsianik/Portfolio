@@ -40,10 +40,12 @@
   border: 0.75px solid #3c3c3c;
   opacity: 1;
   background-color: white;
+  font: normal normal 300 36px/45px Open Sans;
 }
 .add-buttons-section {
   display: flex;
   margin-top: 20px;
+
   > .add-buttons:not(:last-child) {
     margin-right: 44px;
   }
