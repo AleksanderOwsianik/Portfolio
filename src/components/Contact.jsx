@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -71,7 +71,7 @@ export default function Contact() {
             <div className='form-data'>
               <div className='form-field'>
                 <label htmlFor='name'>Name</label>
-                <br />
+
                 <input
                   id='name'
                   name='name'
@@ -83,7 +83,7 @@ export default function Contact() {
               </div>
               <div className='form-field'>
                 <label htmlFor='email'>Email</label>
-                <br />
+
                 <input
                   id='email'
                   name='email'
@@ -94,9 +94,9 @@ export default function Contact() {
                 {errors.email && <span className='error'>{errors.email}</span>}
               </div>
             </div>
-            <div>
+            <div className='form-field'>
               <label htmlFor='message'>Message</label>
-              <br />
+
               <textarea
                 id='message'
                 name='message'

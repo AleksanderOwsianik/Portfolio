@@ -3,11 +3,19 @@
 @import 'settings/colors';
 @import 'settings/buttons';
 @import 'settings/pagination';
+@import 'components/about-us-container';
+@import 'components/contact.scss';
+@import 'components/home-three-columns';
+@import 'components/nav-header.scss';
+@import 'components/simple-steps.scss';
+@import 'components/foundation-organizations.scss';
 
+* {
+  // border: 1px solid red;
+}
 body {
   font-family: $font-base;
-  width: 1900px;
-  height: 5080px;
+
   display: flex;
   justify-content: center;
 }
@@ -30,217 +38,4 @@ a {
   height: 33px;
   background: transparent url('img/Decoration.png') 0% 0% no-repeat padding-box;
   opacity: 1;
-}
-
-.nav-header {
-  .home-image {
-    margin-right: 20px;
-    max-width: 50%;
-    height: 100%;
-    position: relative;
-    top: -60px;
-  }
-  .home-section {
-    display: flex;
-    align-items: center;
-
-    .text-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  }
-}
-
-.home-three-columns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $color3;
-
-  height: 384px;
-  opacity: 1;
-
-  .column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .counter-numbers {
-    font: normal normal 300 90px/122px Open Sans;
-    letter-spacing: 0px;
-    color: #5e5322;
-    opacity: 1;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  .column-main-text {
-    width: 213px;
-    height: 24px;
-    text-align: center;
-    font: normal normal normal 18px/30px Open Sans;
-    letter-spacing: -0.36px;
-    color: #3c3c3c;
-    opacity: 1;
-    margin-top: 28px;
-    font-weight: 600;
-  }
-
-  .column-text {
-    width: 334px;
-    height: 68px;
-    text-align: center;
-    font: normal normal 300 16px/18px Merriweather;
-    letter-spacing: -0.32px;
-    color: #3c3c3c;
-    opacity: 1;
-    top: 1194px;
-    left: 783px;
-    margin-bottom: 60px;
-  }
-}
-
-.simple-steps {
-  text-align: center;
-  text-wrap: wrap;
-  display: flex;
-  flex-direction: column;
-  height: 624px;
-
-  .icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px 10px 0px;
-    padding: 0px 10px 0px;
-  }
-
-  .icons {
-    background-color: lightgrey;
-    align-items: center;
-    margin: 10px 0px 20px;
-    display: flex;
-    justify-content: center;
-    height: 325px;
-  }
-  .simple-main-text {
-    text-align: left;
-    font: normal normal normal 18px/24px Open Sans;
-    letter-spacing: 0px;
-    color: #3c3c3c;
-    opacity: 1;
-    margin-top: -10px;
-  }
-  .simple-text {
-    text-align: center;
-    font: normal normal normal 16px/10px Open Sans;
-    letter-spacing: 0px;
-    color: #3c3c3c;
-    opacity: 1;
-  }
-  .hr {
-    width: 70px;
-    height: 0.5px;
-    border: none;
-    background-color: black;
-    margin: -5px;
-  }
-}
-
-.about-us-container {
-  display: flex;
-  align-items: center;
-  margin-top: 60px;
-  height: 935px;
-  background: #f0f1f1 0% 0% no-repeat padding-box;
-  opacity: 1;
-  width: 1900px;
-
-  .about-us-content {
-    text-align: center;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-    .about-us-text {
-      text-align: center;
-      font: normal normal normal 20px/34px Open Sans;
-      letter-spacing: -0.6px;
-      color: #3c3c3c;
-      opacity: 1;
-    }
-
-    .signature {
-      margin-left: 500px;
-    }
-  }
-
-  .home-image {
-    width: 50%;
-    height: 100%;
-  }
-}
-
-.foundation-organizations {
-  text-align: center;
-
-  .foundation-text {
-  }
-  .foundation-description-text {
-    text-align: left;
-    .donate-things {
-      text-align: end;
-    }
-  }
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .home-image {
-    width: 1230px;
-    margin-right: 90px;
-    opacity: 0.4;
-  }
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .form {
-    width: 528px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-top: 20px;
-    padding: 20px;
-  }
-  .form div {
-    margin-bottom: 20px;
-  }
-
-  .form-data {
-    display: flex;
-    align-items: center;
-  }
-
-  .decoration {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .line {
-    display: block;
-    width: auto;
-
-    border-top: 1px solid #080606;
-  }
 }

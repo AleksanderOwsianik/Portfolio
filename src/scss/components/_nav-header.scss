@@ -1,0 +1,21 @@
+.nav-header {
+  .home-image {
+    margin-right: 20px;
+    max-width: 50%;
+    height: 100%;
+    position: relative;
+    top: -60px;
+  }
+  .home-section {
+    display: flex;
+    align-items: center;
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
