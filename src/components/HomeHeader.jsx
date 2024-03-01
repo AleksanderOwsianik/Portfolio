@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../scss/main.scss';
-// import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 function HomeHeader() {
   const handleMainMenuClick = (path) => {
     console.log(`redirect to path: ${path}`);
@@ -24,68 +24,33 @@ function HomeHeader() {
       </div>
       <nav className='nav-button'>
         <button className='nav-buttons'>
-          <Link to={'/'}>Home</Link>
-
-          {/* <ScrollLink
-            to='home'
-            smooth={true}
-            duration={500}
-            style={{ ...buttonStyle, cursor: 'pointer' }}
-          >
+          <ScrollLink to='home' smooth={true} duration={2222}>
             Home
-          </ScrollLink> */}
+          </ScrollLink>
         </button>
         <button className='nav-buttons'>
-          <Link to={'/about'}>What is it about</Link>
-        </button>
-        <button>
-          {/* <ScrollLink
-            to='about'
-            smooth={true}
-            duration={500}
-            style={{ ...buttonStyle, cursor: 'pointer' }}
-          >
+          <ScrollLink to='simple-steps' smooth={true} duration={2222}>
             What is it about
-          </ScrollLink> */}
+          </ScrollLink>
         </button>
         <button className='nav-buttons'>
-          <Link to={'/about-us'}>About us</Link>
-        </button>
-        <button>
-          {/* <ScrollLink
-            to='about-us'
-            smooth={true}
-            duration={500}
-            style={{ ...buttonStyle, cursor: 'pointer' }}
-          >
+          <ScrollLink to='about-us-container' smooth={true} duration={2222}>
             About us
-          </ScrollLink> */}
+          </ScrollLink>
         </button>
         <button className='nav-buttons'>
-          <Link to={'/organizations'}>Foundation & organizations</Link>
-        </button>
-        <button>
-          {/* <ScrollLink
-            to='organizations'
+          <ScrollLink
+            to='foundation-organizations'
             smooth={true}
-            duration={500}
-            style={{ ...buttonStyle, cursor: 'pointer' }}
+            duration={2200}
           >
             Foundation & organization
-          </ScrollLink> */}
+          </ScrollLink>
         </button>
         <button className='nav-buttons'>
-          <Link to={'/contact'}>Contact</Link>
-        </button>
-        <button>
-          {/* <ScrollLink
-            to='contact'
-            smooth={true}
-            duration={500}
-            style={{ ...buttonStyle, cursor: 'pointer' }}
-          >
+          <ScrollLink to='contact' smooth={true} duration={2222}>
             Contact
-          </ScrollLink> */}
+          </ScrollLink>
         </button>
       </nav>
 

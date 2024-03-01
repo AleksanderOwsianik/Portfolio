@@ -2,6 +2,7 @@
 @import 'settings/fonts';
 @import 'settings/colors';
 @import 'settings/buttons';
+@import 'settings/pagination';
 
 body {
   font-family: $font-base;
@@ -12,9 +13,26 @@ body {
 }
 .home {
 }
-.nav-header {
-  // background-color: violet;
+.main-headline {
+  text-align: center;
+  font: normal normal normal 38px/55px Open Sans;
+  letter-spacing: -0.76px;
+  color: #3c3c3c;
+  opacity: 1;
+}
+a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
 
+.decoration {
+  width: 253px;
+  height: 33px;
+  background: transparent url('img/Decoration.png') 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.nav-header {
   .home-image {
     margin-right: 20px;
     max-width: 50%;
@@ -32,13 +50,6 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-    }
-    .main-headline {
-      text-align: center;
-      font: normal normal normal 38px/55px Open Sans;
-      letter-spacing: -0.76px;
-      color: #3c3c3c;
-      opacity: 1;
     }
   }
 }
@@ -93,17 +104,6 @@ body {
     margin-bottom: 60px;
   }
 }
-a {
-  text-decoration: none;
-  color: #3c3c3c;
-}
-
-.decoration {
-  width: 253px;
-  height: 33px;
-  background: transparent url('img/Decoration.png') 0% 0% no-repeat padding-box;
-  opacity: 1;
-}
 
 .simple-steps {
   text-align: center;
@@ -111,13 +111,7 @@ a {
   display: flex;
   flex-direction: column;
   height: 624px;
-  .simple-main-headline {
-    text-align: center;
-    font: normal normal normal 38px/55px Open Sans;
-    letter-spacing: -0.76px;
-    color: #3c3c3c;
-    opacity: 1;
-  }
+
   .icon {
     display: flex;
     flex-direction: column;
@@ -173,12 +167,6 @@ a {
     display: flex;
     align-items: center;
 
-    .main-headline {
-      font: normal normal normal 38px/55px Open Sans;
-      letter-spacing: -0.76px;
-      color: #3c3c3c;
-      opacity: 1;
-    }
     .about-us-text {
       text-align: center;
       font: normal normal normal 20px/34px Open Sans;
@@ -199,24 +187,60 @@ a {
 }
 
 .foundation-organizations {
-  background-color: aqua;
   text-align: center;
-  .main-headline {
-    font: normal normal normal 38px/55px Open Sans;
-    letter-spacing: -0.76px;
-    color: #3c3c3c;
-    opacity: 1;
-  }
 
-  .fundation-text {
-    background-color: green;
+  .foundation-text {
   }
-  .fundation-description-text {
-    background-color: brown;
+  .foundation-description-text {
     text-align: left;
     .donate-things {
-      color: rgb(99, 201, 79);
       text-align: end;
     }
+  }
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .home-image {
+    width: 1230px;
+    margin-right: 90px;
+    opacity: 0.4;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form {
+    width: 528px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .form div {
+    margin-bottom: 20px;
+  }
+
+  .form-data {
+    display: flex;
+    align-items: center;
+  }
+
+  .decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .line {
+    display: block;
+    width: auto;
+
+    border-top: 1px solid #080606;
   }
 }

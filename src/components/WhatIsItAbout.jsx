@@ -5,7 +5,7 @@ function WhatIsItAbout() {
   return (
     <section className='simple-steps'>
       <div>
-        <h3 className='simple-main-headline'>Four simple steps are enought</h3>
+        <h3 className='main-headline'>Four simple steps are enought</h3>
         <img
           className='decoration'
           src='src/assets/Decoration.svg'

@@ -1,4 +1,5 @@
 import AboutUs from './AboutUs';
+import Contact from './Contact';
 import FoundationOrganizations from './FoundationOrganizations';
 import HomeHeader from './HomeHeader';
 import HomeThreeColumns from './HomeThreeColumns';
@@ -14,6 +15,7 @@ function Home() {
       <WhatIsItAbout />
       <AboutUs />
       <FoundationOrganizations />
+      <Contact />
     </div>
   );
 }

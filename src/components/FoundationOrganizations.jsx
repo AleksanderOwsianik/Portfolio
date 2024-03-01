@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import '../scss/main.scss';
+import ReactPaginate from 'react-paginate';
 
 function FoundationOrganizations() {
-  const [activeButton, setActiveButton] = useState('fundation');
+  const [activeButton, setActiveButton] = useState('foundation');
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 3;
 
   const foundationData = [
     {
@@ -22,9 +25,43 @@ function FoundationOrganizations() {
         'Goal and mission: Help for people without a place of residence.',
       text: 'clothes, food, warm blankets',
     },
+    {
+      name: 'TEST PAGINATION Foundation "I care for Health"',
+      description:
+        'Goal and mission: Helping people in difficult life situation.',
+      text: 'clothes, food, household, appliances, furniture, toys',
+    },
+    {
+      name: 'TEST PAGINATION Foundation "For Children"',
+      description: 'Goal and mission: Helping children from poor families.',
+      text: 'clothes, furniture, toys',
+    },
+    {
+      name: 'TEST PAGINATION Foundation "Without Home',
+      description:
+        'Goal and mission: Help for people without a place of residence.',
+      text: 'clothes, food, warm blankets',
+    },
+    {
+      name: 'TEST PAGINATION 3 Foundation "I care for Health"',
+      description:
+        'Goal and mission: Helping people in difficult life situation.',
+      text: 'clothes, food, household, appliances, furniture, toys',
+    },
+    {
+      name: 'TEST PAGINATION 3 Foundation "For Children"',
+      description: 'Goal and mission: Helping children from poor families.',
+      text: 'clothes, furniture, toys',
+    },
+    {
+      name: 'TEST PAGINATION 3 Foundation "Without Home',
+      description:
+        'Goal and mission: Help for people without a place of residence.',
+      text: 'clothes, food, warm blankets',
+    },
   ];
 
-  const organizationDate = [
+  const organizationData = [
     {
       name: 'Organization "You are Not Alone Foundation for Seniors"',
       description: 'Goal and mission: We help seniors with everyday activities',
@@ -32,6 +69,27 @@ function FoundationOrganizations() {
     },
     {
       name: 'Organization "Rainbow Foundation"',
+      description: 'Goal and mission: Helping animal',
+      text: 'blankets, food, equipment for animal',
+    },
+
+    {
+      name: 'Organization "You are Not Alone Foundation for Seniors"',
+      description: 'Goal and mission: We help seniors with everyday activities',
+      text: 'walking together, shooping ',
+    },
+    {
+      name: 'TEST PAGINATION 2 Organization "Rainbow Foundation"',
+      description: 'Goal and mission: Helping animal',
+      text: 'blankets, food, equipment for animal',
+    },
+    {
+      name: 'TEST PAGINATION 2 Organization "You are Not Alone Foundation for Seniors"',
+      description: 'Goal and mission: We help seniors with everyday activities',
+      text: 'walking together, shooping ',
+    },
+    {
+      name: 'TEST PAGINATION 2 Organization "Rainbow Foundation"',
       description: 'Goal and mission: Helping animal',
       text: 'blankets, food, equipment for animal',
     },
@@ -58,38 +116,52 @@ function FoundationOrganizations() {
   ];
   const handleButtonClick = (buttonType) => {
     setActiveButton(buttonType);
+    setCurrentPage(0);
   };
 
   const renderContent = () => {
+    let data = [];
+
     switch (activeButton) {
-      case 'fundation':
-        return foundationData.map((foundation, index) => (
-          <div key={index}>
-            <h4>{foundation.name}</h4>
-            <p>{foundation.description}</p>
-            <p className='donate-things'>{foundation.text}</p>
-          </div>
-        ));
+      case 'foundation':
+        data = foundationData;
+        break;
       case 'organization':
-        return organizationDate.map((organization, index) => (
-          <div key={index}>
-            <h4>{organization.name}</h4>
-            <p>{organization.description}</p>
-            <p className='donate-things'>{organization.text}</p>
-          </div>
-        ));
+        data = organizationData;
+        break;
       case 'local':
-        return localCollectionsData.map((localCollection, index) => (
-          <div key={index}>
-            <h4>{localCollection.name}</h4>
-            <p>{localCollection.description}</p>
-            <p className='donate-things'>{localCollection.text}</p>
-          </div>
-        ));
+        data = localCollectionsData;
+        break;
       default:
-        return null;
+        break;
     }
+
+    const offset = currentPage * itemsPerPage;
+    const currentPageData = data.slice(offset, offset + itemsPerPage);
+
+    return currentPageData.map((item, index) => (
+      <div key={index}>
+        <h4>{item.name}</h4>
+        <p>{item.description}</p>
+        <p className='donate-things'>{item.text}</p>
+        <hr></hr>
+      </div>
+    ));
   };
+
+  const pageCount = Math.ceil(
+    (activeButton === 'foundation'
+      ? foundationData
+      : activeButton === 'organization'
+      ? organizationData
+      : localCollectionsData
+    ).length / itemsPerPage,
+  );
+
+  const handlePageClick = (selectedPage) => {
+    setCurrentPage(selectedPage.selected);
+  };
+
   return (
     <div className='foundation-organizations'>
       <h3 className='main-headline'>Who do we help?</h3>
@@ -98,12 +170,12 @@ function FoundationOrganizations() {
         src='src/assets/Decoration.svg'
         alt='decoration'
       />
-      <div className='fundation-text'>
+      <div className='foundation-text'>
         <button
-          onClick={() => handleButtonClick('fundation')}
-          className={activeButton === 'fundation' ? 'active' : ''}
+          onClick={() => handleButtonClick('foundation')}
+          className={activeButton === 'foundation' ? 'active' : ''}
         >
-          Fundation
+          Foundation
         </button>
         <button
           onClick={() => handleButtonClick('organization')}
@@ -117,13 +189,25 @@ function FoundationOrganizations() {
         >
           Local collections
         </button>
-        <h4>
+        <p className='about-us-text'>
           In our database you will find a list of verified
           Foundation,Oorganization, Local collections with we cooperate. You can
           chec what thes do, who they help and what they need.{' '}
-        </h4>
+        </p>
       </div>
-      <div className='fundation-description-text'>{renderContent()}</div>
+      <div className='foundation-description-text'>{renderContent()}</div>
+      <ReactPaginate
+        previousLabel={<img src='src/assets/arrow-left.svg' alt='previous' />}
+        nextLabel={<img src='src/assets/arrow-right.svg' alt='next' />}
+        breakLabel={'...'}
+        breakClassName={'break-me'}
+        pageCount={pageCount}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={5}
+        onPageChange={handlePageClick}
+        containerClassName={'pagination'}
+        activeClassName={'active'}
+      />
     </div>
   );
 }
